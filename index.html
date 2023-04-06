@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Age APP</title>
+    
+</head>
+<body>
+    <main>
+        <section class="principal">
+            <div class="label">
+                <label for="day" id="lday"><p>DAY</p></label>
+                <label for="month" id="lmonth"><p>MONTH</p></label>
+                <label for="year" id="lyear"><p>YEAR</p></label>
+            </div>
+            <div class="data">
+                <input type="number" name="day" id="day" placeholder="DD">
+                <input type="number" name="month" id="month" placeholder="MM">
+                <input type="number" name="year" id="year" placeholder="YYYY">
+            
+            </div>
+            <div class="erro">
+                <p class="msn-erro" id="erro-1">this field is required </p>
+                <p class="msn-erro" id="erro-2">this field is required</p>
+                <p class="msn-erro" id="erro-3">this field is required</p>
+            </div>
+        </section>
+        <aside><button onclick="calculaIdade()"><img src="images/icon-arrow.svg" alt="botao" class="arrow"></button></aside>
+        <section class="resultado">
+            <h1><span id="result1">--</span> year</h1>
+            <h1><span id="result2">--</span> months</h1>
+            <h1><span id="result3">--</span> days</h1>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
