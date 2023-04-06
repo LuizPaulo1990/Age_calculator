@@ -2,7 +2,7 @@ function calculaIdade(){
 
     const data = new Date();
     let currentYear = data.getFullYear();
-    let currentmonth = data.getMonth() + 1;
+    let currentmonth = data.getMonth();
     let currentDay = data.getDate();
     
     let txtDay = document.getElementById('day');
