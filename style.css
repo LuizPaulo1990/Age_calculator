@@ -38,17 +38,17 @@ div.label{
    
 }
 
-label.day{
+#lday{
     position: relative;
     left: -23px;
 }
 
-label.month{
+#lmonth{
     position: relative;
     left: -13px;
 }
 
-label.year{
+#lyear{
     position: relative;
     left: -28px;
 }
@@ -139,4 +139,151 @@ h1{
 
 span{
     color: #864cff;
+}
+
+
+@media screen  and (max-width: 520px) {
+
+
+    main{
+    
+        background-color: #ffffff;
+        width: 350px;
+        height: 500px;
+        border-radius: 15px 15px 30% 15px;
+    }
+    
+    section.principal{
+        width: 80%;
+        height: 26%;
+        margin-left: 40px;
+        border-bottom: 0.7px solid #8a8a8a6d;
+        
+    }
+    
+    div.label{
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        width: 80%;
+        color: #8a8a8a;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        font-size: 10px;
+        letter-spacing: 3px;
+       
+    }
+    
+    #lday{
+        position: relative;
+        left: -30px;
+    }
+    
+    #lmonth{
+        position: relative;
+        left: 13px;
+    }
+    
+    #lyear{
+        position: relative;
+        left: 28px;
+    }
+    
+    
+    div.data{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;  
+    }
+    
+    input{
+        width: 80px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: bolder;
+        padding-left: 10px;
+        margin-right: 10px;
+        border: 0.7px solid #8a8a8a6e;
+        border-radius: 5px;
+         
+    }
+    
+    input[type=number]:focus{
+        outline: none;
+        border: 0.7px solid #864cff;
+    }
+    
+    ::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+    
+    .erro{
+        display: flex;
+        justify-content: left;
+        width: 340px;
+        margin-top: 6px;
+        position: relative;
+        left: -20px;
+
+    }
+    
+    
+    .msn-erro{
+        visibility: hidden;
+        font-size: 9px;
+        font-weight: normal;
+        font-style: italic;
+        color: hsl(0, 100%, 67%);
+        padding-right: 18px;
+        
+    }
+    
+    
+    
+    aside{
+        display: flex;
+        justify-content: center;
+
+        
+    }
+    
+    aside button{
+        background-color: #864cff;
+        border-radius: 50%;
+        border-style: none;
+        height: 55px;
+        width: 55px;
+        margin-top: 5px;
+        position: relative;
+        left: 1px;
+    
+    }
+    
+    .arrow{
+        width: 50%;
+    }
+    
+    button:active{
+        background-color: hsl(0, 0%, 8%);   
+    }
+    
+    section.resultado{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+    h1{
+        font-size: 58px;
+        font-weight: bolder;
+    }
+    
+    span{
+        color: #864cff;
+    }
+    
+
+
 }
