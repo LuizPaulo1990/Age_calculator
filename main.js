@@ -2,16 +2,17 @@ function calculaIdade(){
 
     const data = new Date();
     let currentYear = data.getFullYear();
-    let currentmonth = data.getMonth();
+    let currentmonth = data.getMonth() + 1;
     let currentDay = data.getDate();
     
     let txtDay = document.getElementById('day');
     let txtMonth = document.getElementById('month');
     let txtYear = document.getElementById('year');
 
-    let year = Number(txtYear.value) - currentYear;
-    let month = Number(txtMonth) - currentmonth;
-    let days = Number(txtDay.value) - currentDay;
+    let year = currentYear - Number(txtYear.value);
+    let month ='';
+    let day ='';
+    
     
 
     if(txtDay.value.length == 0){
@@ -44,8 +45,20 @@ function calculaIdade(){
 
         iday.style.border = '1px solid hsl(0, 100%, 67%)';
     } else{
+        if(parseInt(txtDay.value) >= currentDay){
+            if(month > parseInt(txtMonth.value)){
+                month -= 1;
+                day = parseInt(txtDay.value) - currentDay;
+            }else{
+                day = parseInt(txtDay.value) - currentDay;
+            }
+        }else{
+            day = 31 - parseInt(txtDay.value);
+        }
+
+
+
         let dayResult = document.getElementById('result3');
-        
         dayResult.innerHTML = day;
     }
 
@@ -75,8 +88,16 @@ function calculaIdade(){
 
         imonth.style.border = '1px solid hsl(0, 100%, 67%)';
     } else{
-        let monthResult = document.getElementById('result2');
 
+        if(parseInt(txtMonth.value) > currentmonth){
+            year -= 1;
+            month = 12 + currentmonth - parseInt(txtMonth.value);
+        }else{
+            month =  currentmonth - parseInt(txtMonth.value);
+        }
+
+
+        let monthResult = document.getElementById('result2');
         monthResult.innerHTML = month;
     }
 
@@ -110,9 +131,7 @@ function calculaIdade(){
 
     } else{
         let yearRes = document.getElementById('result1');
-        let age = (year * 365) + (month * 31) + days
-        let realAge = age / year;
-        yearRes.innerHTML = realAge;
+        yearRes.innerHTML = year;
     }
         
     
